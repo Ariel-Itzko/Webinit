@@ -1,0 +1,37 @@
+import pyautogui
+import time
+import subprocess
+
+
+# Enter Google in full size screen
+
+time.sleep(1)  # Wait for 1 seconds before starting
+
+pyautogui.keyDown('ctrl')       # מחזיק פיזית את הכפתור קונטרול
+pyautogui.press('right')        # לוחץ על חץ ימני
+pyautogui.keyUp('ctrl')         # משחרר את הכפתור קונטרול
+
+
+# לפתוח תיקייה לפי המיקום שלה על המחשב
+folder_path = "/Users/arielitzkovich/Desktop/etc/python google"
+subprocess.run(['open', folder_path])
+
+# Enter Google in full size screen
+pyautogui.moveTo(395 , 280 , duration=0.5)
+pyautogui.rightClick()
+pyautogui.moveTo(430 , 292 , duration=0.5)
+pyautogui.click()
+
+
+# open a new tab
+pyautogui.moveTo(1418 , 65 , duration=0.5)
+pyautogui.click()
+pyautogui.moveTo(1300 , 105 , duration=0.5)
+pyautogui.click()
+pyautogui.moveTo(695 , 418 , duration=0.5)
+pyautogui.click()
+
+# keyboard input
+
+pyautogui.typewrite('Hello fartook', interval=0.1) # מחכה 0.1 שניות בין אות לאותה שהוא כותב
+pyautogui.press('enter')  # לוחץ על אנטר
